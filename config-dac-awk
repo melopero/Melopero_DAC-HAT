@@ -9,7 +9,7 @@
 
 /^[^\#]*dtoverlay=hifiberry-dacplus/ { DEFAULT=0 }
 
-/^\#Melopero DAC/ { DEFAULT=0 }
+/^\# Melopero DAC/ { DEFAULT=0 }
 
 DEFAULT { print }
 
