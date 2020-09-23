@@ -1,0 +1,16 @@
+#!/usr/bin/awk -f
+
+{DEFAULT=1}
+
+/^[^\#]*dtparam=audio=on/ {
+    DEFAULT=0
+    print "#dtparam=audio=on"
+}
+
+/^[^\#]*dtoverlay=hifiberry-dacplus/ { DEFAULT=0 }
+
+/^\#Melopero DAC/ { DEFAULT=0 }
+
+DEFAULT { print }
+
+END { print "\n\# Melopero DAC\ndtoverlay=hifiberry-dacplus\n" }
