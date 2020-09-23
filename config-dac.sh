@@ -1,4 +1,6 @@
 #!/bin/bash
 
-sed -i 's/dtparam=audio=on/#dtparam=audio=on/' /boot/config.txt 
-printf "\n# Melopero DAC\ndtoverlay=hifiberry-dacplus\n" >> /boot/config.txt 
+wget https://raw.githubusercontent.com/melopero/Melopero_DAC-HAT/master/config-dac-awk > config-dac-awk
+awk -f config-dac-awk /boot/config.txt > config.txt.tmp
+cat config.txt.tmp > /boot/config.txt
+rm config-dac-awk config.txt.tmp
