@@ -13,4 +13,4 @@
 
 DEFAULT { print }
 
-END { print "\n\# Melopero DAC\ndtoverlay=hifiberry-dacplus\n" }
+END { print "\n# Melopero DAC\ndtoverlay=hifiberry-dacplus\n" }
